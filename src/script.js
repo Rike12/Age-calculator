@@ -2,14 +2,14 @@
 const dayInput =document.querySelector("#day");
 const monthInput =document.querySelector ("#month");
 const yearInput = document.querySelector ("#year");
-//const submit_button= document.querySelector(".submit_button");
+const submit_button= document.querySelector(".submit_button");
 
 //OUTPUT ELEMENTS
 
 const dayOutput =document.querySelector(".output-day");
 const monthOutput =document.querySelector (".output-month");
 const yearOutput = document.querySelector(".output-year");
-const submit_button= document.querySelector(".submit_button");
+//const submit_button= document.querySelector(".submit_button");
 
 //ERROR ELEMENTS
 const error_day = document.querySelector(".error-day");
@@ -77,4 +77,6 @@ yearInput.addEventListener("input",(e)=>{
     } else{
         error_year.textContent = "";
     }
-})
+});
+
+
