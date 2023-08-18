@@ -5,9 +5,9 @@ const yearInput = document.getElementById ("year");
 
 //OUTPUTS
 
-const dayOutput =document.getElementById("day");
-const monthOutput =document.getElementById ("month");
-const yearOutput = document.getElementById("year");
+const dayOutput =document.getElementById("#day");
+const monthOutput =document.getElementById ("#month");
+const yearOutput = document.getElementById("#year");
 
 // FORM ELEMENT
 

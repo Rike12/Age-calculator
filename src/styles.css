@@ -68,7 +68,7 @@ input ::placeholder{
 .submit_block hr{
     width: 100%;
 }
-.submit_block .btn{
+.submit_block .submit{
  border-radius: 50%;
  padding: 1rem;
  background-color: var(--Purple);
