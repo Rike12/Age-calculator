@@ -159,3 +159,28 @@ function handleSubmit(e) {
     }
 
 }
+
+
+
+//SAVING THE INPUT AND OUTPUT TO LOCAL STORAGE
+ function saveToLocal(inputDOB, y, m, d){
+ if (window.localStorage){
+
+    //USING JSON.STRINGIFY CONVERT THE  JSON OBJECT INTO STRING
+    localStorage.setItem('lastAgeCalc', JSON.stringify({inputDOB, y,m,d}));
+ }
+}
+//EVENT LISTENER FOR WHEN THE DOCUMENT HAS FINISHED RENDERING
+window.document.onreadystatechange = function(){
+
+    // RETRIEVING THE STORED  STRING DATA AND CONVERTING IT BACK TO JSON OBJECT
+    const ageData = JSON.parse(localStorage.getItem("lastAgeCalc"));
+    
+    dayInput.value =ageData.inputDOB.day;
+    monthInput.value = ageData.inputDOB.month;
+    monthInput.value = ageData.inputDOB.year;
+
+    dayOutput.innerHTML = ageData.d;
+    monthOutput.innerHTML= ageData.m;
+    monthInput.innerHTML = ageData.y;
+}
