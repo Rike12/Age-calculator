@@ -115,47 +115,40 @@ function handleSubmit(e) {
 
 
         // A DATE OBJECT IS CREATED CONTAINING THE INPUTED DATE OF BIRTH
-        let dob = new Date();
-
-        dob.setFullYear(inputDate.year);
-        dob.setMonth(inputDate.month);
-        dob.setDate(inputDate.day);
+        const dob = new Date (inputDate.year, inputDate.month-1, inputDate.day);
+        const currentDate =new Date();
 
         // THE DIFFERENCE IN MILLISECONDS IS CALCULATED FROM THE DATE INSERTED TO THE CURRENT DATE
 
-        const month_difference = (new Date()).getTime() - dob.getTime();
+        const ageInMillis = currentDate - dob;
 
 
         // THE NUMBER OF MILLISECONDS IS CALCULATED
 
-        const day_millis = 1000 * 60 * 60 * 24;
+        const dayInMillis = 1000 * 60 * 60 * 24;
 
        // THE DIFFERENCE IN MILLISECONDS IS CONVERTED TO DAYS
 
-        let d = Math.floor(month_difference/day_millis);
-        let m = y = 0;
+       const days =Math.floor (ageInMillis/dayInMillis);
 
         // THE DAYS IS CONVERTED TO YEAR BY DIVISION AND ROUNDED DOWN
         
-        y=Math.floor(d/365);
+        const years = Math.floor (days/365);
+        
          // THE REMAINING DAYS AFTER CALCULATING THE YEAR IS EXTRACTED
-        d = d%365;
+       const remainingDays = days % 365;
 
-        // THE NUMBER OF MONTHS IN THE REMAINING DAYS ARE CALCULATED
-        m = Math.floor(d/31);
+         // THE NUMBER OF MONTHS IN THE REMAINING DAYS ARE CALCULATED
+      const months = Math.floor (remainingDays/31);
 
         // THE REMAINING DAYS AFTER THE MONTHS ARE CALCULATED
-        d= d % 31;
+        dayOutput.textContent = remainingDays % 31;
+        monthOutput.textContent = months;
+        yearOutput.textContent = years;
 
-        
-       // THE CALCULATED AGE IS DISPLAYED
-        dayOutput.innerHTML = d;
-        monthOutput.innerHTML = m;
-        yearOutput.innerHTML = y;
-
-
+    
         // CALLING THE FUNCTION TO SAVE THE INPUT DOB AND THE CALCULATED OUTPUT
-        saveToLocal(inputDate, y,m,d);
+        saveToLocal(inputDate, years, months, remainingDays);
     }
 
 }
@@ -178,9 +171,9 @@ window.document.onreadystatechange = function(){
     
     dayInput.value =ageData.inputDOB.day;
     monthInput.value = ageData.inputDOB.month;
-    monthInput.value = ageData.inputDOB.year;
+    yearInput.value = ageData.inputDOB.year;
 
     dayOutput.innerHTML = ageData.d;
     monthOutput.innerHTML= ageData.m;
-    monthInput.innerHTML = ageData.y;
+    yearOutput.innerHTML = ageData.y;
 }

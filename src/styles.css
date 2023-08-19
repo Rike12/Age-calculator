@@ -92,9 +92,13 @@ input ::placeholder{
 small{
     color: var(--Red) ;
 }
+
+/*-----------------------MEDIA QUERY---------------------------------------*/
+
+
 @media screen and (max-width:600px) {
     .card{
-        width:360px;
+        width:400px;
     }
     .container{
         padding: 1rem;
@@ -107,7 +111,7 @@ small{
     .submit_block{
         position: relative;
     }
-    .btn{
+    .submit_button{
         position: absolute;
         top:50%;
         left:50%;
