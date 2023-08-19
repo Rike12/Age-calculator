@@ -148,7 +148,7 @@ function handleSubmit(e) {
 
     
         // CALLING THE FUNCTION TO SAVE THE INPUT DOB AND THE CALCULATED OUTPUT
-        saveToLocal(inputDate, years, months, remainingDays);
+        saveToLocal(inputDate, years, months,remainingDays);
     }
 
 }
