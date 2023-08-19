@@ -115,7 +115,7 @@ function handleSubmit(e) {
 
 
         // A DATE OBJECT IS CREATED CONTAINING THE INPUTED DATE OF BIRTH
-        const dob = new Date (inputDate.year, inputDate.month-1, inputDate.day);
+        const dob = new Date (inputDate.year, inputDate.month -1, inputDate.day );
         const currentDate =new Date();
 
         // THE DIFFERENCE IN MILLISECONDS IS CALCULATED FROM THE DATE INSERTED TO THE CURRENT DATE
