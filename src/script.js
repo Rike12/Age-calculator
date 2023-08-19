@@ -1,15 +1,15 @@
 //INPUT ELEMENTS
-const dayInput =document.querySelector("#day");
-const monthInput =document.querySelector ("#month");
-const yearInput = document.querySelector ("#year");
-const submit_button= document.querySelector(".submit_button");
+const dayInput =document.getElementById("day");
+const monthInput =document.getElementById ("month");
+const yearInput = document.getElementById ("year");
+
 
 //OUTPUT ELEMENTS
 
-const dayOutput =document.querySelector(".output-day");
-const monthOutput =document.querySelector (".output-month");
-const yearOutput = document.querySelector(".output-year");
-//const submit_button= document.querySelector(".submit_button");
+const dayOutput =document.getElementById("DD");
+const monthOutput =document.getElementById ("MM");
+const yearOutput = document.getElementById("YY");
+
 
 //ERROR ELEMENTS
 const error_day = document.querySelector(".error-day");
