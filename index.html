@@ -13,44 +13,64 @@
     <title>Age Calculator</title>
 </head>
 <body>
+    <!-------------------------------------------THE MAIN CARD---------------------------------------->
     <div class="card">
+        <!------------------------------------- CONTAINER------------------------------------------->
         <div class="container">
             
+
+            <!---------------------------------------FORM ------------------------------------->
                     <form >
                         <div class="form-container">
 
+
+                       <!----------DAY INPUT----------->     
                     <div class="block">
                         <label for="day">Day</label>
                         <input type="number" id="day" placeholder="00">
                         <small></small>
                     </div>
+
+                    <!---------MONTH INPUT------------->
                     <div class="block">
                         <label for="month">Month</label>
                         <input type="number" id="month" placeholder="MM">
                         <small></small>
                     </div>
+                    <!------ YEAR INPUT-------->
                     <div class="block">
                         <label for="day">Year</label>
                         <input type="number" id="year" placeholder="YY">
+
+                         <!-----ERROR TEXT----->
                         <small></small>
                     </div>
                         </div>
+
+                        <!------SUBMIT BUTTON------->
                     <div class="submit_block">
                         <hr>
                         <button type="submit" class="submit_button" ><img src="/src/images/icon-arrow.svg" alt=""></button>
                     </div>
+                   
                     <small></small>
                 </form>
-                
-            
+                <!--------------=================END OF FORM --============---------------------->
+              
+           <!---------------------------OUTPUT DAY, MONTH AND YEAR---------------------------------------->  
+
             <div class="output">
                 <h1><span id="YY">---</span>years</h1>
                 <h1><span id="MM">---</span>months</h1>
                 <h1><span id="DD">---</span>days</h1>
             </div>
+            <!---==============================END OF OUTPUTS DAY ,MONTHS AND YEARS================================================--->
         </div>
+        <!--------=========================== END OF CONTAINER==============================--------->
     </div>
+    <!---===================================== END OF MAIN CARD===================================----->
 
+    <!----LINKING JAVASCRIPT TO HTML------>
     <script src="src/script.js"></script>
 </body>
 </html>
